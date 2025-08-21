@@ -101,6 +101,7 @@
 
     h1 span:nth-child(2) {
         z-index: 1;
+        left: 0;
     }
 
     p {

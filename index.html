@@ -14,97 +14,105 @@
     
 </head>
 <body>
-    <div class="container">
+    <!-- Top Menu -->
+    <nav class="top-menu">
+        <div class="logo">henrique.</div>
+        <!-- Hamburger Menu -->
+        <div class="hamburger" id="hamburger">  
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu-links" id="menuLinks">
+            <a href="#home">Home</a>
+            <a href="#about">Sobre mim</a>
+            <a href="#services">Serviços</a>
+            <a href="#portfolio">Portfólio</a>
+            <a href="#contact"><button class="btn">Contate-me</button></a>
+        </div>
+    </nav>
 
-        <!-- Top Menu -->
-        <nav class="top-menu">
-            <div class="logo">henrique.</div>
-            <!-- Hamburger Menu -->
-            <div class="hamburger" id="hamburger">  
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links" id="menuLinks">
-                <a href="#home">Home</a>
-                <a href="#about">Sobre mim</a>
-                <a href="#services">Serviços</a>
-                <a href="#portfolio">Portfólio</a>
-                <a href="#contact"><button class="btn">Contate-me</button></a>
-            </div>
-        </nav>
-  
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="image-container">
+            <img src="resources/images/profilepic1.png" alt="User Portrait">
+        </div>
+        <div class="title-container">
+        <h1>
+            <span>Desenvolvedor Web Full Stack</span><span>Desenvolvedor Mobile</span>
+        </h1>
+        <p>Saudações! Sou Lucas Henrique, desenvolvedor de aplicações Web e Mobile. Conheça meu portfólio profissional. </p>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about">
+        <div class="item1">
+            <h2 id="aboutTitle">sobre mim.</h2>
+            <h2>Transformo ideias em aplicações web e mobile completas, com código limpo e performance.</h2>
+            <a href="#contact"><button class="btn">Contate-me</button></a>
+        </div>
+
+        <div class="item2"><img src="resources/images/cubo.svg"></div>
+        <div class="item3"><img src="resources/images/cubo.svg"></div>
         
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="image-container">
-                <img src="resources/images/profilepic1.png" alt="User Portrait">
+        <div class="item4">
+            <p>Olá! Sou Lucas Henrique, desenvolvedor web full stack e mobile, 
+                especializado em criar aplicações completas que unem funcionalidade, performance e uma experiência de usuário intuitiva.</p>
+            <p>Gosto de trabalhar em projetos desafiadores e relevantes, sempre buscando transformar ideias em soluções digitais das quais eu possa me orgulhar. 
+                Tenho atenção tanto ao código limpo e otimizado quanto ao design responsivo e fluido, garantindo interfaces modernas, agradáveis e de alto impacto.</p>
+        </div>
+
+
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Available Services</h2>
+        <div class="service-list">
+            <div>
+                <h3>Design Visual</h3>
+                <p>Creating unique, functional, and beautiful designs</p>
             </div>
-            <div class="title-container">
-            <h1>
-                <span>Desenvolvedor Web Full Stack</span><span>Desenvolvedor Mobile</span>
-            </h1>
-            <p>Saudações! Sou Lucas Henrique, desenvolvedor de aplicações Web e Mobile. Conheça meu portfólio profissional. </p>
+            <div>
+                <h3>Development</h3>
+                <p>Developing products that go beyond the forefront</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- About Me Section -->
-        <section id="about" class="about">
-            <h2>I can deliver results that exceed expectations</h2>
-            <p>Understanding the relationship between design and users...</p>
-            <div class="stats">
-                <div><strong>312+</strong><br>Projects Completed</div>
-                <div><strong>281+</strong><br>Happy Clients</div>
-                <div><strong>10+</strong><br>Years Experience</div>
-            </div>
-        </section>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <h2>Selected Works (2020-2022)</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item"></div>
+            <div class="portfolio-item"></div>
+            <div class="portfolio-item"></div>
+        </div>
+    </section>
 
-        <!-- Services Section -->
-        <section id="services" class="services">
-            <h2>Available Services</h2>
-            <div class="service-list">
-                <div>
-                    <h3>Design Visual</h3>
-                    <p>Creating unique, functional, and beautiful designs</p>
-                </div>
-                <div>
-                    <h3>Development</h3>
-                    <p>Developing products that go beyond the forefront</p>
-                </div>
-            </div>
-        </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Let's Talk Collaboration</h2>
+        <button class="btn">Get in Touch</button>
+    </section>
 
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="portfolio">
-            <h2>Selected Works (2020-2022)</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item"></div>
-                <div class="portfolio-item"></div>
-                <div class="portfolio-item"></div>
-            </div>
-        </section>
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top" onclick="scrollToTop()">&#8679;</button>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact">
-            <h2>Let's Talk Collaboration</h2>
-            <button class="btn">Get in Touch</button>
-        </section>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+    <script>
+        document.getElementById('hamburger').onclick = function() {
+            this.classList.toggle('active');
+            document.getElementById('menuLinks').classList.toggle('active');
+        };
+    </script>
 
-        <!-- Scroll to Top Button -->
-        <button id="scrollTopBtn" class="scroll-top" onclick="scrollToTop()">&#8679;</button>
-
-        <script>
-            function scrollToTop() {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-        </script>
-        <script>
-            document.getElementById('hamburger').onclick = function() {
-                this.classList.toggle('active');
-                document.getElementById('menuLinks').classList.toggle('active');
-            };
-        </script>
-    </div>
     
 </body>
 </html>
